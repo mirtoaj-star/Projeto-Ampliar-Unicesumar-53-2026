@@ -6,11 +6,11 @@
 
     Processamento:
     - Verificar se A é diferente de 0.
-    - Calcular o delta. (? = b² - 4.a.c)
+    - Calcular o delta. (delta = b² - 4.a.c)
     - Verificar se o delta é:
         - negativo: A equação não possui raízes reais
         - igual a zero: calcular apenas x = -b / 2a
-        - positivo: x = -b +- ?? / 2.a
+        - positivo: x = -b +- raiz de delta / 2.a
     - Calcular as raízes quando possível.
 
     Saída:
