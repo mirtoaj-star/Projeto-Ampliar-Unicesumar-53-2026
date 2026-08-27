@@ -1,0 +1,35 @@
+/*
+    Escreva um algoritmo que leia uma idade e um nome e escreva-o na tela.
+    
+    #include <string.h>
+
+    fgets(variável, sizeof(variável), stdin);
+    variável[ strcspn(variável, "\n") ] = '\0';
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <string.h>
+
+
+int main() {
+
+    setlocale(LC_ALL, "Portuguese_Brazil");
+    system("clear");
+
+    int idade;
+    char nome[20];
+
+    printf("Informe sua idade: ");
+    scanf("%d", &idade);
+    getchar();
+
+    printf("Informe seu nome: ");
+    fgets(nome, sizeof(nome),stdin);
+    nome[strcspn(nome, "\n")] = '\0';
+
+    printf("%s tem %d anos\n", nome, idade);
+
+    return 0;
+}
