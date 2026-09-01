@@ -1,10 +1,49 @@
 /*
     Escreva um algortimo em C que receba:
 
-    MatrÌcula do Aluno:
+    Matr√≠cula do Aluno:
     Idade do Aluno:
     Nome do Aluno:
-    EndereÁo do Aluno:
+    Endere√ßo do Aluno:
 
-    O programa dever· escrever na tela a ficha completa do aluno, incluindo nome, idade, matricula e endereÁo.
+    O programa dever√° escrever na tela a ficha completa do aluno, incluindo nome, idade, matricula e endere√ßo.
 */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <string.h>
+
+int main() {
+
+    setlocale(LC_ALL,"pt-BR.UTF-8");
+    system("clear");
+
+    int matricula, idade;
+    char nome[20], endereco[100];
+
+    printf("Informe a matricula do aluno: ");
+    scanf("%d", &matricula);
+
+    printf("Informe a idade do aluno: ");
+    scanf("%d", &idade);
+    getchar();
+
+    printf("Informe o nome do aluno: ");
+    fgets(nome, sizeof(nome), stdin);
+    nome[strcspn(nome, "\n")] = '\0';
+
+    printf("Informe o endere√ßo do aluno: ");
+    fgets(endereco, sizeof(endereco), stdin);
+    endereco[strcspn(endereco, "\n")] = '\0';
+
+    printf(
+        "::: ALUNO :::\n"
+        "Matricula: %d\n"
+        "Nome: %s\n"
+        "Idade: %d\n"
+        "Endere√ßo: %s", matricula, nome, idade, endereco
+    );
+
+    return 0;
+}
